@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace GerenciadorDeFinanças
+﻿namespace GerenciadorDeFinanças
 {
     public partial class FormCadastroDespesas : Form
     {
         public FormCadastroDespesas()
         {
             InitializeComponent();
+            btnCancelar.Click += (s, e) => this.Close();
+            btnSalvar.Click += (s, e) =>
+            {
+                // Validação mínima
+                if (string.IsNullOrWhiteSpace(txtDescricao.Text) ||
+                    string.IsNullOrWhiteSpace(txtValor.Text))
+                {
+                    MessageBox.Show("Preencha ao menos Descrição e Valor.",
+                        "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // TODO: salvar no banco de dados
+                this.Close();
+            };
         }
     }
 }
