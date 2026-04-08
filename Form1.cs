@@ -20,12 +20,19 @@ namespace GerenciadorDeFinanças
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
-            => new FormCategorias().ShowDialog();
+        {
+            new FormCategorias().ShowDialog();
+        }
+
 
         private void btnMetas_Click(object sender, EventArgs e)
-            => new FormMetas().ShowDialog();
+        {
+             new FormMetas().ShowDialog();
+        }
 
         private void btnRelatorios_Click(object sender, EventArgs e)
-            => new FormRelatorios().ShowDialog();
+        {
+             new FormRelatorios().ShowDialog();
+        }        
     }
 }
