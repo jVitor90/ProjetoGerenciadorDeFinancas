@@ -14,130 +14,170 @@
 
         private void InitializeComponent()
         {
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.btnNovaReceita = new System.Windows.Forms.Button();
-            this.dgvReceitas = new System.Windows.Forms.DataGridView();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colObservacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcoes = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).BeginInit();
-            this.SuspendLayout();
-
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            lblTitulo = new Label();
+            lblSubtitulo = new Label();
+            btnNovaReceita = new Button();
+            dgvReceitas = new DataGridView();
+            colDescricao = new DataGridViewTextBoxColumn();
+            colCategoria = new DataGridViewTextBoxColumn();
+            colData = new DataGridViewTextBoxColumn();
+            colObservacao = new DataGridViewTextBoxColumn();
+            colValor = new DataGridViewTextBoxColumn();
+            colAcoes = new DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvReceitas).BeginInit();
+            SuspendLayout();
+            // 
             // lblTitulo
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.lblTitulo.Location = new System.Drawing.Point(32, 24);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Text = "Receitas";
-
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 14F);
+            lblTitulo.ForeColor = Color.FromArgb(240, 239, 232);
+            lblTitulo.Location = new Point(32, 24);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(80, 25);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Receitas";
+            // 
             // lblSubtitulo
-            this.lblSubtitulo.AutoSize = true;
-            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.lblSubtitulo.Location = new System.Drawing.Point(33, 48);
-            this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Text = "Todos os lançamentos";
-
+            // 
+            lblSubtitulo.AutoSize = true;
+            lblSubtitulo.Font = new Font("Segoe UI", 8.5F);
+            lblSubtitulo.ForeColor = Color.FromArgb(122, 120, 110);
+            lblSubtitulo.Location = new Point(33, 48);
+            lblSubtitulo.Name = "lblSubtitulo";
+            lblSubtitulo.Size = new Size(124, 15);
+            lblSubtitulo.TabIndex = 1;
+            lblSubtitulo.Text = "Todos os lançamentos";
+            // 
             // btnNovaReceita
-            this.btnNovaReceita.BackColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.btnNovaReceita.FlatAppearance.BorderSize = 0;
-            this.btnNovaReceita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(180, 220, 75);
-            this.btnNovaReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaReceita.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnNovaReceita.ForeColor = System.Drawing.Color.FromArgb(15, 15, 13);
-            this.btnNovaReceita.Location = new System.Drawing.Point(720, 28);
-            this.btnNovaReceita.Name = "btnNovaReceita";
-            this.btnNovaReceita.Size = new System.Drawing.Size(148, 34);
-            this.btnNovaReceita.Text = "+ Nova receita";
-            this.btnNovaReceita.Cursor = System.Windows.Forms.Cursors.Hand;
-            // this.btnNovaReceita.Click += new System.EventHandler(this.btnNovaReceita_Click);
-
+            // 
+            btnNovaReceita.BackColor = Color.FromArgb(200, 245, 90);
+            btnNovaReceita.Cursor = Cursors.Hand;
+            btnNovaReceita.FlatAppearance.BorderSize = 0;
+            btnNovaReceita.FlatAppearance.MouseOverBackColor = Color.FromArgb(180, 220, 75);
+            btnNovaReceita.FlatStyle = FlatStyle.Flat;
+            btnNovaReceita.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnNovaReceita.ForeColor = Color.FromArgb(15, 15, 13);
+            btnNovaReceita.Location = new Point(720, 28);
+            btnNovaReceita.Name = "btnNovaReceita";
+            btnNovaReceita.Size = new Size(148, 34);
+            btnNovaReceita.TabIndex = 2;
+            btnNovaReceita.Text = "+ Nova receita";
+            btnNovaReceita.UseVisualStyleBackColor = false;
+            // 
             // dgvReceitas
-            this.dgvReceitas.AllowUserToAddRows = false;
-            this.dgvReceitas.AllowUserToDeleteRows = false;
-            this.dgvReceitas.BackgroundColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvReceitas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dgvReceitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvReceitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvReceitas.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvReceitas.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 7.5F);
-            this.dgvReceitas.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.dgvReceitas.ColumnHeadersDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvReceitas.ColumnHeadersHeight = 40;
-            this.dgvReceitas.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvReceitas.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dgvReceitas.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.dgvReceitas.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(37, 37, 33);
-            this.dgvReceitas.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.dgvReceitas.EnableHeadersVisualStyles = false;
-            this.dgvReceitas.GridColor = System.Drawing.Color.FromArgb(38, 38, 34);
-            this.dgvReceitas.Location = new System.Drawing.Point(32, 76);
-            this.dgvReceitas.MultiSelect = false;
-            this.dgvReceitas.Name = "dgvReceitas";
-            this.dgvReceitas.ReadOnly = true;
-            this.dgvReceitas.RowHeadersVisible = false;
-            this.dgvReceitas.RowTemplate.Height = 46;
-            this.dgvReceitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReceitas.Size = new System.Drawing.Size(836, 460);
-            this.dgvReceitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-                this.colDescricao, this.colCategoria, this.colData, this.colObservacao, this.colValor, this.colAcoes });
-
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
-            this.colDescricao.DataPropertyName = "Descricao";
-            this.colDescricao.Width = 220;
-
-            this.colCategoria.HeaderText = "CATEGORIA";
-            this.colCategoria.Name = "colCategoria";
-            this.colCategoria.DataPropertyName = "Categoria";
-            this.colCategoria.Width = 160;
-
-            this.colData.HeaderText = "DATA";
-            this.colData.Name = "colData";
-            this.colData.DataPropertyName = "Data";
-            this.colData.Width = 110;
-
-            this.colObservacao.HeaderText = "OBSERVAÇÃO";
-            this.colObservacao.Name = "colObservacao";
-            this.colObservacao.DataPropertyName = "Observacao";
-            this.colObservacao.Width = 170;
-
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
-            this.colValor.DataPropertyName = "Valor";
-            this.colValor.DefaultCellStyle.Font = new System.Drawing.Font("Courier New", 9F);
-            this.colValor.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.colValor.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colValor.Width = 120;
-
-            this.colAcoes.HeaderText = "";
-            this.colAcoes.Name = "colAcoes";
-            this.colAcoes.Text = "Excluir";
-            this.colAcoes.UseColumnTextForButtonValue = true;
-            this.colAcoes.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(37, 37, 33);
-            this.colAcoes.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.colAcoes.Width = 56;
-
-            // Form
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(15, 15, 13);
-            this.ClientSize = new System.Drawing.Size(900, 560);
-            this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblSubtitulo);
-            this.Controls.Add(this.btnNovaReceita);
-            this.Controls.Add(this.dgvReceitas);
-            this.Name = "FormReceitas";
-            this.Text = "Receitas";
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReceitas)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            dgvReceitas.AllowUserToAddRows = false;
+            dgvReceitas.AllowUserToDeleteRows = false;
+            dgvReceitas.BackgroundColor = Color.FromArgb(22, 22, 20);
+            dgvReceitas.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvReceitas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 7.5F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(122, 120, 110);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvReceitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvReceitas.ColumnHeadersHeight = 40;
+            dgvReceitas.Columns.AddRange(new DataGridViewColumn[] { colDescricao, colCategoria, colData, colObservacao, colValor, colAcoes });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(240, 239, 232);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(37, 37, 33);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(200, 245, 90);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvReceitas.DefaultCellStyle = dataGridViewCellStyle4;
+            dgvReceitas.EnableHeadersVisualStyles = false;
+            dgvReceitas.GridColor = Color.FromArgb(38, 38, 34);
+            dgvReceitas.Location = new Point(32, 76);
+            dgvReceitas.MultiSelect = false;
+            dgvReceitas.Name = "dgvReceitas";
+            dgvReceitas.ReadOnly = true;
+            dgvReceitas.RowHeadersVisible = false;
+            dgvReceitas.RowTemplate.Height = 46;
+            dgvReceitas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvReceitas.Size = new Size(836, 460);
+            dgvReceitas.TabIndex = 3;
+            // 
+            // colDescricao
+            // 
+            colDescricao.DataPropertyName = "Descricao";
+            colDescricao.HeaderText = "DESCRIÇÃO";
+            colDescricao.Name = "colDescricao";
+            colDescricao.ReadOnly = true;
+            colDescricao.Width = 220;
+            // 
+            // colCategoria
+            // 
+            colCategoria.DataPropertyName = "Categoria";
+            colCategoria.HeaderText = "CATEGORIA";
+            colCategoria.Name = "colCategoria";
+            colCategoria.ReadOnly = true;
+            colCategoria.Width = 160;
+            // 
+            // colData
+            // 
+            colData.DataPropertyName = "Data";
+            colData.HeaderText = "DATA";
+            colData.Name = "colData";
+            colData.ReadOnly = true;
+            colData.Width = 110;
+            // 
+            // colObservacao
+            // 
+            colObservacao.DataPropertyName = "Observacao";
+            colObservacao.HeaderText = "OBSERVAÇÃO";
+            colObservacao.Name = "colObservacao";
+            colObservacao.ReadOnly = true;
+            colObservacao.Width = 170;
+            // 
+            // colValor
+            // 
+            colValor.DataPropertyName = "Valor";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Font = new Font("Courier New", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(200, 245, 90);
+            colValor.DefaultCellStyle = dataGridViewCellStyle2;
+            colValor.HeaderText = "VALOR";
+            colValor.Name = "colValor";
+            colValor.ReadOnly = true;
+            colValor.Width = 120;
+            // 
+            // colAcoes
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(37, 37, 33);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(122, 120, 110);
+            colAcoes.DefaultCellStyle = dataGridViewCellStyle3;
+            colAcoes.HeaderText = "";
+            colAcoes.Name = "colAcoes";
+            colAcoes.ReadOnly = true;
+            colAcoes.Text = "Excluir";
+            colAcoes.UseColumnTextForButtonValue = true;
+            colAcoes.Width = 56;
+            // 
+            // FormReceitas
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(15, 15, 13);
+            ClientSize = new Size(900, 560);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblSubtitulo);
+            Controls.Add(btnNovaReceita);
+            Controls.Add(dgvReceitas);
+            Name = "FormReceitas";
+            Text = "Receitas";
+            ((System.ComponentModel.ISupportInitialize)dgvReceitas).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
