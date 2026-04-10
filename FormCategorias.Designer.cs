@@ -14,185 +14,238 @@
 
         private void InitializeComponent()
         {
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.btnNovaCategoria = new System.Windows.Forms.Button();
-            this.panelCadastro = new System.Windows.Forms.Panel();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
-            this.panelCadastro.SuspendLayout();
-            this.SuspendLayout();
-
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            lblTitulo = new Label();
+            lblSubtitulo = new Label();
+            btnNovaCategoria = new Button();
+            panelCadastro = new Panel();
+            lblNome = new Label();
+            txtNome = new TextBox();
+            lblTipo = new Label();
+            cmbTipo = new ComboBox();
+            btnSalvar = new Button();
+            btnCancelar = new Button();
+            dgvCategorias = new DataGridView();
+            colNome = new DataGridViewTextBoxColumn();
+            colTipo = new DataGridViewTextBoxColumn();
+            colExcluir = new DataGridViewButtonColumn();
+            panelCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
+            SuspendLayout();
+            // 
             // lblTitulo
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.lblTitulo.Location = new System.Drawing.Point(32, 24);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Text = "Categorias";
-
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 14F);
+            lblTitulo.ForeColor = Color.FromArgb(240, 239, 232);
+            lblTitulo.Location = new Point(32, 24);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(102, 25);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Categorias";
+            // 
             // lblSubtitulo
-            this.lblSubtitulo.AutoSize = true;
-            this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.lblSubtitulo.Location = new System.Drawing.Point(33, 48);
-            this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Text = "Gerencie seus grupos";
-
+            // 
+            lblSubtitulo.AutoSize = true;
+            lblSubtitulo.Font = new Font("Segoe UI", 8.5F);
+            lblSubtitulo.ForeColor = Color.FromArgb(122, 120, 110);
+            lblSubtitulo.Location = new Point(33, 48);
+            lblSubtitulo.Name = "lblSubtitulo";
+            lblSubtitulo.Size = new Size(119, 15);
+            lblSubtitulo.TabIndex = 1;
+            lblSubtitulo.Text = "Gerencie seus grupos";
+            // 
             // btnNovaCategoria
-            this.btnNovaCategoria.BackColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.btnNovaCategoria.FlatAppearance.BorderSize = 0;
-            this.btnNovaCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(180, 220, 75);
-            this.btnNovaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaCategoria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnNovaCategoria.ForeColor = System.Drawing.Color.FromArgb(15, 15, 13);
-            this.btnNovaCategoria.Location = new System.Drawing.Point(648, 28);
-            this.btnNovaCategoria.Name = "btnNovaCategoria";
-            this.btnNovaCategoria.Size = new System.Drawing.Size(164, 34);
-            this.btnNovaCategoria.Text = "+ Nova categoria";
-            this.btnNovaCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            // this.btnNovaCategoria.Click += new System.EventHandler(this.btnNovaCategoria_Click);
-
+            // 
+            btnNovaCategoria.BackColor = Color.FromArgb(200, 245, 90);
+            btnNovaCategoria.Cursor = Cursors.Hand;
+            btnNovaCategoria.FlatAppearance.BorderSize = 0;
+            btnNovaCategoria.FlatAppearance.MouseOverBackColor = Color.FromArgb(180, 220, 75);
+            btnNovaCategoria.FlatStyle = FlatStyle.Flat;
+            btnNovaCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnNovaCategoria.ForeColor = Color.FromArgb(15, 15, 13);
+            btnNovaCategoria.Location = new Point(648, 28);
+            btnNovaCategoria.Name = "btnNovaCategoria";
+            btnNovaCategoria.Size = new Size(164, 34);
+            btnNovaCategoria.TabIndex = 2;
+            btnNovaCategoria.Text = "+ Nova categoria";
+            btnNovaCategoria.UseVisualStyleBackColor = false;
+            btnNovaCategoria.Click += btnNovaCategoria_Click;
+            // 
             // panelCadastro
-            this.panelCadastro.BackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.panelCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCadastro.Controls.Add(this.lblNome);
-            this.panelCadastro.Controls.Add(this.txtNome);
-            this.panelCadastro.Controls.Add(this.lblTipo);
-            this.panelCadastro.Controls.Add(this.cmbTipo);
-            this.panelCadastro.Controls.Add(this.btnSalvar);
-            this.panelCadastro.Controls.Add(this.btnCancelar);
-            this.panelCadastro.Location = new System.Drawing.Point(32, 76);
-            this.panelCadastro.Name = "panelCadastro";
-            this.panelCadastro.Size = new System.Drawing.Size(780, 100);
-            this.panelCadastro.Visible = false;
-
+            // 
+            panelCadastro.BackColor = Color.FromArgb(22, 22, 20);
+            panelCadastro.BorderStyle = BorderStyle.FixedSingle;
+            panelCadastro.Controls.Add(lblNome);
+            panelCadastro.Controls.Add(txtNome);
+            panelCadastro.Controls.Add(lblTipo);
+            panelCadastro.Controls.Add(cmbTipo);
+            panelCadastro.Controls.Add(btnSalvar);
+            panelCadastro.Controls.Add(btnCancelar);
+            panelCadastro.Location = new Point(32, 76);
+            panelCadastro.Name = "panelCadastro";
+            panelCadastro.Size = new Size(780, 100);
+            panelCadastro.TabIndex = 3;
+            panelCadastro.Visible = false;
+            // 
             // lblNome
-            this.lblNome = CriarLabel("NOME", 16, 12);
-            this.txtNome.BackColor = System.Drawing.Color.FromArgb(30, 30, 27);
-            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.txtNome.Location = new System.Drawing.Point(16, 28);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(300, 24);
-
+            // 
+            lblNome.Location = new Point(0, 0);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(100, 23);
+            lblNome.TabIndex = 0;
+            // 
+            // txtNome
+            // 
+            txtNome.BackColor = Color.FromArgb(30, 30, 27);
+            txtNome.BorderStyle = BorderStyle.FixedSingle;
+            txtNome.Font = new Font("Segoe UI", 9.5F);
+            txtNome.ForeColor = Color.FromArgb(240, 239, 232);
+            txtNome.Location = new Point(16, 28);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(300, 24);
+            txtNome.TabIndex = 1;
+            // 
             // lblTipo
-            this.lblTipo = CriarLabel("TIPO", 332, 12);
-            this.cmbTipo.BackColor = System.Drawing.Color.FromArgb(30, 30, 27);
-            this.cmbTipo.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTipo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.cmbTipo.Items.AddRange(new object[] { "receita", "despesa" });
-            this.cmbTipo.SelectedIndex = 0;
-            this.cmbTipo.Location = new System.Drawing.Point(332, 28);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(180, 24);
-
-            // btnCancelar
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(30, 30, 27);
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(60, 60, 56);
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(37, 37, 33);
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.btnCancelar.Location = new System.Drawing.Point(592, 28);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 32);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            // this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-
+            // 
+            lblTipo.Location = new Point(0, 0);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(100, 23);
+            lblTipo.TabIndex = 2;
+            // 
+            // cmbTipo
+            // 
+            cmbTipo.BackColor = Color.FromArgb(30, 30, 27);
+            cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipo.FlatStyle = FlatStyle.Flat;
+            cmbTipo.Font = new Font("Segoe UI", 9.5F);
+            cmbTipo.ForeColor = Color.FromArgb(240, 239, 232);
+            cmbTipo.Items.AddRange(new object[] { "receita", "despesa" });
+            cmbTipo.Location = new Point(332, 28);
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.Size = new Size(180, 25);
+            cmbTipo.TabIndex = 3;
+            // 
             // btnSalvar
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(180, 220, 75);
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.ForeColor = System.Drawing.Color.FromArgb(15, 15, 13);
-            this.btnSalvar.Location = new System.Drawing.Point(688, 28);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(80, 32);
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            // this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-
+            // 
+            btnSalvar.BackColor = Color.FromArgb(200, 245, 90);
+            btnSalvar.Cursor = Cursors.Hand;
+            btnSalvar.FlatAppearance.BorderSize = 0;
+            btnSalvar.FlatAppearance.MouseOverBackColor = Color.FromArgb(180, 220, 75);
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnSalvar.ForeColor = Color.FromArgb(15, 15, 13);
+            btnSalvar.Location = new Point(688, 28);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(80, 32);
+            btnSalvar.TabIndex = 4;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.FromArgb(30, 30, 27);
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(60, 60, 56);
+            btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(37, 37, 33);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI", 9F);
+            btnCancelar.ForeColor = Color.FromArgb(122, 120, 110);
+            btnCancelar.Location = new Point(592, 28);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(84, 32);
+            btnCancelar.TabIndex = 5;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // dgvCategorias
-            this.dgvCategorias.AllowUserToAddRows = false;
-            this.dgvCategorias.AllowUserToDeleteRows = false;
-            this.dgvCategorias.BackgroundColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dgvCategorias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvCategorias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvCategorias.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvCategorias.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 7.5F);
-            this.dgvCategorias.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.dgvCategorias.ColumnHeadersDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvCategorias.ColumnHeadersHeight = 40;
-            this.dgvCategorias.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 22, 20);
-            this.dgvCategorias.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dgvCategorias.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(240, 239, 232);
-            this.dgvCategorias.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(37, 37, 33);
-            this.dgvCategorias.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(200, 245, 90);
-            this.dgvCategorias.EnableHeadersVisualStyles = false;
-            this.dgvCategorias.GridColor = System.Drawing.Color.FromArgb(38, 38, 34);
-            this.dgvCategorias.Location = new System.Drawing.Point(32, 76);
-            this.dgvCategorias.MultiSelect = false;
-            this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.ReadOnly = true;
-            this.dgvCategorias.RowHeadersVisible = false;
-            this.dgvCategorias.RowTemplate.Height = 44;
-            this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(780, 440);
-            this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-                this.colNome, this.colTipo, this.colExcluir });
-
-            this.colNome.HeaderText = "NOME";
-            this.colNome.Name = "colNome";
-            this.colNome.DataPropertyName = "Nome";
-            this.colNome.Width = 400;
-
-            this.colTipo.HeaderText = "TIPO";
-            this.colTipo.Name = "colTipo";
-            this.colTipo.DataPropertyName = "Tipo";
-            this.colTipo.Width = 300;
-
-            this.colExcluir.HeaderText = "";
-            this.colExcluir.Name = "colExcluir";
-            this.colExcluir.Text = "Excluir";
-            this.colExcluir.UseColumnTextForButtonValue = true;
-            this.colExcluir.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(37, 37, 33);
-            this.colExcluir.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(122, 120, 110);
-            this.colExcluir.Width = 80;
-
-            // Form
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(15, 15, 13);
-            this.ClientSize = new System.Drawing.Size(844, 540);
-            this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblSubtitulo);
-            this.Controls.Add(this.btnNovaCategoria);
-            this.Controls.Add(this.panelCadastro);
-            this.Controls.Add(this.dgvCategorias);
-            this.Name = "FormCategorias";
-            this.Text = "Categorias";
-
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
-            this.panelCadastro.ResumeLayout(false);
-            this.panelCadastro.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            dgvCategorias.AllowUserToAddRows = false;
+            dgvCategorias.AllowUserToDeleteRows = false;
+            dgvCategorias.BackgroundColor = Color.FromArgb(22, 22, 20);
+            dgvCategorias.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvCategorias.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 7.5F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(122, 120, 110);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCategorias.ColumnHeadersHeight = 40;
+            dgvCategorias.Columns.AddRange(new DataGridViewColumn[] { colNome, colTipo, colExcluir });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(22, 22, 20);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(240, 239, 232);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(37, 37, 33);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(200, 245, 90);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvCategorias.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvCategorias.EnableHeadersVisualStyles = false;
+            dgvCategorias.GridColor = Color.FromArgb(38, 38, 34);
+            dgvCategorias.Location = new Point(32, 76);
+            dgvCategorias.MultiSelect = false;
+            dgvCategorias.Name = "dgvCategorias";
+            dgvCategorias.ReadOnly = true;
+            dgvCategorias.RowHeadersVisible = false;
+            dgvCategorias.RowTemplate.Height = 44;
+            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCategorias.Size = new Size(780, 440);
+            dgvCategorias.TabIndex = 4;
+            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
+            // 
+            // colNome
+            // 
+            colNome.DataPropertyName = "Nome";
+            colNome.HeaderText = "NOME";
+            colNome.Name = "colNome";
+            colNome.ReadOnly = true;
+            colNome.Width = 400;
+            // 
+            // colTipo
+            // 
+            colTipo.DataPropertyName = "Tipo";
+            colTipo.HeaderText = "TIPO";
+            colTipo.Name = "colTipo";
+            colTipo.ReadOnly = true;
+            colTipo.Width = 300;
+            // 
+            // colExcluir
+            // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(37, 37, 33);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(122, 120, 110);
+            colExcluir.DefaultCellStyle = dataGridViewCellStyle2;
+            colExcluir.HeaderText = "";
+            colExcluir.Name = "colExcluir";
+            colExcluir.ReadOnly = true;
+            colExcluir.Text = "Excluir";
+            colExcluir.UseColumnTextForButtonValue = true;
+            colExcluir.Width = 80;
+            // 
+            // FormCategorias
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(15, 15, 13);
+            ClientSize = new Size(844, 540);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblSubtitulo);
+            Controls.Add(btnNovaCategoria);
+            Controls.Add(panelCadastro);
+            Controls.Add(dgvCategorias);
+            Name = "FormCategorias";
+            Text = "Categorias";
+            panelCadastro.ResumeLayout(false);
+            panelCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label CriarLabel(string texto, int x, int y)

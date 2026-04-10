@@ -14,7 +14,7 @@ namespace GerenciadorDeFinanças.Model
         //Informações da conexão com o BD
         private const string SERVER = "localhost",
                               PORT = "3306",
-                              DATABASE = "financero",
+                              DATABASE = "financeiro",
                               UID = "root",
                               PWD = "";
 
