@@ -35,5 +35,10 @@
                 cmbTipo.SelectedIndex = 0;
             };
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

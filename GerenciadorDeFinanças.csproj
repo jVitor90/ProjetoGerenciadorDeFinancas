@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Model\Despesas.cs~RF2448a49.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySqlConnector" Version="2.5.0" />
   </ItemGroup>
 
